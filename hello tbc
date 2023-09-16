@@ -1,0 +1,92 @@
+1 code: print("hello TBC")
+
+2 code: for i in range(2, 10001, 2):
+    print(i)
+
+3 code: # Input number
+number = int(input("Enter a number: "))
+
+# Check if the number is divisible by 7
+if number % 7 == 0:
+    print("divided")
+else:
+    print("not divided")
+
+4 code: import random
+
+# Generate 10 random numbers and put them in an array
+random_numbers = [random.randint(1, 100) for _ in range(10)]
+
+# Calculate the sum of the random numbers
+sum_of_numbers = sum(random_numbers)
+
+# Check if the sum is even or odd
+is_sum_even = sum_of_numbers % 2 == 0
+
+# Print the result
+print(is_sum_even)
+
+5 code: import random
+
+# Initialize empty arrays for even and odd numbers
+even_numbers = []
+odd_numbers = []
+
+# Generate 10 random numbers for each array
+for _ in range(10):
+    number = random.randint(1, 100)
+    if number % 2 == 0:
+        even_numbers.append(number)
+    else:
+        odd_numbers.append(number)
+
+# Check if the count of even numbers is greater than the count of odd numbers and less than 700
+is_condition_met = len(even_numbers) > len(odd_numbers) and sum(even_numbers) < 700
+
+# Print the result
+print(is_condition_met)
+
+6 code: import math
+
+def calculate_triangle_area(a, b, c):
+    # Calculate the semi-perimeter
+    s = (a + b + c) / 2
+    
+    # Calculate the area using Heron's formula
+    area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+    
+    return area
+
+# Example usage:
+side1 = 5.0
+side2 = 6.0
+side3 = 7.0
+
+triangle_area = calculate_triangle_area(side1, side2, side3)
+print(f"The area of the triangle is: {triangle_area}")
+
+7 code: import random
+
+def is_greater_than_seven(number):
+    return number > 7
+
+# Generate a random number between 1 and 10
+random_number = random.randint(1, 10)
+
+# Check if the random number is greater than 7 and print the result
+result = is_greater_than_seven(random_number)
+print(result)
+
+8 code: def sum_multiples_of_3(start, end):
+    total = 0
+    for number in range(start, end + 1):
+        if number % 3 == 0:
+            total += number
+    return total
+
+# Example usage:
+start = 1
+end = 20
+result = sum_multiples_of_3(start, end)
+print("Sum of multiples of 3 between {} and {}: {}".format(start, end, result))
+
